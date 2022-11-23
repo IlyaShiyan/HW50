@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -14,10 +15,10 @@ public class Main {
         listOfAnimals.add(new Animal("Hippo"));
         listOfAnimals.add(new Animal("Hare"));
 
-
-        for (Animal animal:listOfAnimals) {
-            if (animal. == "A" || animal. =="E".hashCode() ||animal. == "I" ||animal. == "O" || animal. =="U" || animal. == "Y" ) {
-                listOfAnimals.remove(animal);
+        Iterator<Animal> animal= listOfAnimals.iterator();
+        while (animal.hasNext()){
+            if (animal.next().name.charAt(0) == 'A' || animal.next().name.charAt(0) =='E'||animal.next().name.charAt(0)== 'I' ||animal.next().name.charAt(0)== 'O' || animal.next().name.charAt(0) =='U' || animal.next().name.charAt(0) == 'Y' ) {
+               animal.remove();
             }
         }
 
