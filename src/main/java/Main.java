@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,10 +16,12 @@ public class Main {
         listOfAnimals.add(new Animal("Hippo"));
         listOfAnimals.add(new Animal("Hare"));
 
-        Iterator<Animal> animal= listOfAnimals.iterator();
+        ListIterator<Animal> animal= listOfAnimals.listIterator();
         while (animal.hasNext()){
-            if (animal.next().name.charAt(0) == 'A' || animal.next().name.charAt(0) =='E'||animal.next().name.charAt(0)== 'I' ||animal.next().name.charAt(0)== 'O' || animal.next().name.charAt(0) =='U' || animal.next().name.charAt(0) == 'Y' ) {
+            Animal an = animal.next();
+            if (an.name.charAt(0) == 'A' || an.name.charAt(0) =='E'||an.name.charAt(0)== 'I' ||an.name.charAt(0)== 'O' || an.name.charAt(0) =='U' || an.name.charAt(0) == 'Y' ) {
                animal.remove();
+               break;
             }
         }
 
