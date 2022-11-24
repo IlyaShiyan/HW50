@@ -21,7 +21,6 @@ public class Main {
             Animal an = animal.next();
             if (an.name.charAt(0) == 'A' || an.name.charAt(0) =='E'||an.name.charAt(0)== 'I' ||an.name.charAt(0)== 'O' || an.name.charAt(0) =='U' || an.name.charAt(0) == 'Y' ) {
                animal.remove();
-               break;
             }
         }
 
